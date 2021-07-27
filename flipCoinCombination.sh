@@ -1,38 +1,55 @@
 #!/bin/bash
+HHH=0
+TTT=0
+HTT=0
+THT=0
+TTH=0
+THH=0
+HTH=0
+HHT=0
 
-HEAD=0
-TAIL=0
 
-HH=0
-HT=0
-TH=0
-TT=0
 
 for (( i=1; i<=100; i++ ))
 do
-        ran=$((RANDOM%4))
+        ran=$((RANDOM%9))
         if (( $ran == 0 ))
     then
-        HH=$(($HH+1))
-        #echo "HH"
+        HHH=$(($HHH+1))
 
 
     elif (( $ran == 1 ))
     then
-        HT=$(($HT+1))
-        #echo "HT"
+        TTT=$(($TTT+1))
 
 
     elif (( $ran == 2 ))
     then
-        TH=$(($TH+1))
-        #echo "TH"
+        HTT=$(($HTT+1))
 
 
-    elif (( $ran == 3 ))
+    elif (( $ran == 4 ))
     then
-        TT=$(($TT+1))
-        #echo "TT"
+        THT=$(($THT+1))
+
+    elif (( $ran == 5 ))
+    then
+        TTH=$(($TTH+1))
+
+
+    elif (( $ran == 6 ))
+    then
+        THH=$(($THH+1))
+
+
+    elif (( $ran == 7 ))
+    then
+        HTH=$(($HTH+1))
+
+
+    elif (( $ran == 8 ))
+    then
+        HHT=$(($HHT+1))
         fi
 done
-echo "HH :"$HH"%" "HT :"$HT"%" "TH :"$TH"%" "TT :"$TT"%"
+echo "HHH :"$HHH"%" "TTT :"$TTT"%" "HTT :"$HTT"%" "THT :"$THT"%" "TTH :"$TTH"%" "THH :"$THH"%" "HTH :"$HTH"%" "HHT :"$HHT"%"
